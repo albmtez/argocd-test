@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: prometheus
+    namespace: project-one
   project: project-one
   source:
     chart: prometheus
