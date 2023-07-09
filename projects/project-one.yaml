@@ -16,7 +16,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root-project-one
+  name: root-apps-project-one
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
@@ -25,7 +25,7 @@ spec:
     namespace: argocd
   project: project-one
   source:
-    path: projects/project-one
+    path: applications/project-one
     repoURL: https://github.com/albmtez/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
