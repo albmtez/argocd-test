@@ -8,8 +8,8 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
-  project: default
+    namespace: project-two
+  project: project-two
   source:
     chart: prometheus
     helm:
