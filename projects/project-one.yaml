@@ -6,3 +6,23 @@ metadata:
 spec:
   sourceNamespaces:
   - namespace-one
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: root-project-one
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  project: project-one
+  source:
+    path: projects/
+    repoURL: https://github.com/albmtez/argocd-test.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
