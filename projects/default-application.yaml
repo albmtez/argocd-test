@@ -10,7 +10,7 @@ spec:
     namespace: argocd
   project: default
   source:
-    path: apps/
+    path: apps/default/
     repoURL: https://github.com/albmtez/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
