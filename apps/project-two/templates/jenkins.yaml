@@ -11,13 +11,8 @@ spec:
     namespace: project-two
   project: project-two
   source:
-    chart: prometheus
-    helm:
-      values: |
-        pushgateway:
-          enabled: false
-    repoURL: https://prometheus-community.github.io/helm-charts
-    targetRevision: 15.5.0
+    chart: jenkins
+    repoURL: https://charts.jenkins.io
   syncPolicy:
     automated:
       prune: true
