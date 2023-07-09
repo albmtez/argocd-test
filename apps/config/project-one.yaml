@@ -1,7 +1,7 @@
 # kind: AppProject
 # apiVersion: argoproj.io/v1alpha1
 # metadata:
-#   name: project-two
+#   name: project-one
 #   namespace: argocd
 # spec:
 #   clusterResourceWhitelist:
@@ -16,16 +16,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: apps-project-two
+  name: apps-project-one
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
-  project: project-two
+  project: project-one
   source:
-    path: apps/project-two
+    path: apps/projects/project-one
     repoURL: https://github.com/albmtez/argocd-test.git
     targetRevision: HEAD
   syncPolicy:

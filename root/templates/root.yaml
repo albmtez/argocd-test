@@ -1,22 +1,7 @@
-# kind: AppProject
-# apiVersion: argoproj.io/v1alpha1
-# metadata:
-#   name: default
-#   namespace: argocd
-# spec:
-#   clusterResourceWhitelist:
-#   - group: '*'
-#     kind: '*'
-#   destinations:
-#   - namespace: '*'
-#     server: '*'
-#   sourceRepos:
-#   - '*'
----
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: apps-default
+  name: root
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
@@ -24,8 +9,8 @@ spec:
     server: https://kubernetes.default.svc
     namespace: argocd
   project: default
-  source:
-    path: apps/default/
+  sources:
+  - path: apps/config/
     repoURL: https://github.com/albmtez/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
