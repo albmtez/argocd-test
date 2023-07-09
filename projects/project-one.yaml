@@ -4,8 +4,14 @@ metadata:
   name: project-one
   namespace: argocd
 spec:
-  sourceNamespaces:
-  - argocd
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: '*'
+    server: '*'
+  sourceRepos:
+  - '*'
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
