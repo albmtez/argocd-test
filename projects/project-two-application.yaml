@@ -8,7 +8,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
-  project: project-one
+  project: project-two
   source:
     path: apps/project-two
     repoURL: https://github.com/albmtez/argocd-test.git
