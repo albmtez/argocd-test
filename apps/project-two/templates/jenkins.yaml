@@ -13,6 +13,7 @@ spec:
   source:
     chart: jenkins
     repoURL: https://charts.jenkins.io
+    targetRevision: 4.3.30
   syncPolicy:
     automated:
       prune: true
