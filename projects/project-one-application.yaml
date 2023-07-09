@@ -10,7 +10,7 @@ spec:
     namespace: argocd
   project: project-one
   source:
-    path: applications/project-one
+    path: apps/project-one
     repoURL: https://github.com/albmtez/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
